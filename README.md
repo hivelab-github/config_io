@@ -12,8 +12,8 @@ the parameters of the lidar and inputing the parameters that need to be searched
 values can be obtained.<br>
 ## How does it work？You should really read it，it's important! 
 Usage:<br>
-　*　#include "config_io.h" <br>
-　*　using hivelab_config_io::Config; <br>
+　* #include "config_io.h" <br>
+　* using hivelab_config_io::Config; <br>
 //Read the Config_ini file： <br>
 　* Config::SetConfigPath("mypath/config.ini"); <br>
 　* //Or : Config::UseDefaultPath("config.ini"); <br>
@@ -22,7 +22,6 @@ Usage:<br>
 ## Additional information
 A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The 
 results of testing in kdevelop are as follows.<br>
-Result：<br>
 <br>
 Config Read INFO: Read 6 config fields.<br>
 Config Read INFO: Read 34 config contents.<br>
