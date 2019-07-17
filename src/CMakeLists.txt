@@ -1,0 +1,1 @@
+add_library(config_io SHARED config_io.cpp)
