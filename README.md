@@ -12,7 +12,7 @@ the parameters of the lidar and inputing the parameters that need to be searched
 values can be obtained.<br>
 ## How does it work？You should really read it，it's important! 
 Usage:<br>
-　* #include "config_io.h" <br>
+　*  #include "config_io.h" <br>
 　* using hivelab_config_io::Config; <br>
 //Read the Config_ini file： <br>
 　* Config::SetConfigPath("mypath/config.ini"); <br>
