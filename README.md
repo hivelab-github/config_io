@@ -1,14 +1,15 @@
 # lidar_parameters_config
 First entered the gate of github, I hope I will be better in the future.
 ## What it does
-When writing a program, you often encounter a variety of parameters. If the parameters are written directly in the program,the<br>
-program needs to be recompiled each time it is modified. When the number is increasing, the modification becomes difficult. <br>
-Therefore, it is an excellent way to define a configuration file outside the program,and the contents of the configuration file <br>
-are read while the program is running. In this way, each modification only needs to change the content of the configuration file,<br>
-and the program itself does not modify it.<br>
-Config_io provides configuration parameters, and the main program reads the parameter file by calling the Config_io built-in <br>
-function. The parameter file is placed in the Config folder and is the relevant data of the lidar. By specifying the parameters <br>
-of the lidar and inputing the parameters that need to be searched, the corresponding parameter values can be obtained.<br>
+*When writing a program, you often encounter a variety of parameters. If the parameters are written  
+directly in the program,the program needs to be recompiled each time it is modified. When the number  
+is increasing, the modification becomes difficult. Therefore, it is an excellent way to define a   
+configuration file outside the program,and the contents of the configuration file 
+are read while the program is running. In this way, each modification only needs to change the content of the configuration file,
+and the program itself does not modify it.
+*Config_io provides configuration parameters, and the main program reads the parameter file by calling the Config_io built-in 
+function. The parameter file is placed in the Config folder and is the relevant data of the lidar. By specifying the parameters 
+of the lidar and inputing the parameters that need to be searched, the corresponding parameter values can be obtained.
 ## How does it work？You should really read it，it's important! 
 Usage:<br>
 　　　#include "config_io.h" <br>
@@ -19,7 +20,7 @@ Usage:<br>
 //Read the parameters you need： <br>
 　　　float var=Config::Get("FieldName","VarName"); <br>
 ## Additional information
-A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The <br>
+A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The 
 results of testing in kdevelop are as follows.<br>
 Result：<br>
 Config Read INFO: Read 6 config fields.<br>
