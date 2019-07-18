@@ -11,7 +11,7 @@ cumbersome. On the other hand, using its parameters' commands simply causes a wa
 reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders, which can be used to read<br>
 and store related project parameters.<br>
 ## What it does
-　 * Config_io provides configuration parameters, and the main program reads the parameter file by calling the Config_io  
+　 Config_io provides configuration parameters, and the main program reads the parameter file by calling the Config_io  
 built-in function. The parameter file is placed in the Config folder and is the relevant data of the lidar. By specifying  
 the parameters of the lidar and inputing the parameters that need to be searched, the corresponding parameter <br>
 values can be obtained.<br>
@@ -29,8 +29,8 @@ and the parameters of different lidars.<br>
 　   float var=Config::Get("FieldName","VarName"); <br>
 <br>
 　3. Else:<br>
-　　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing the symbol in<br>
-the configuration file, you need to change the second parameter of SetConfig() to the corresponding symbol;<br>
+　　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing the symbol<br>
+in the configuration file, you need to change the second parameter of SetConfig() to the corresponding symbol;<br>
 　　* When using the Get() function, incorrect input will cause the compiler to prompt "Field name or variable name does<br>
 not exist!"<br>
 　　* When using the GetVector() and GetVector2() functions，incorrect parameter name input causes the compiler to prompt<br>
