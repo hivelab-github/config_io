@@ -12,21 +12,21 @@ operation is cumbersome. On the other hand, using its parameters' commands simpl
 capacity. For this reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders,<br>
 which can be used to read and store related project parameters.<br>
 ## What it does
-　   Config_io provides configuration parameters, and the main program reads the parameter file by calling the Config_io  
-built-in function. The parameter file is placed in the Config folder and is the relevant data of the lidar. By specifying  
-the parameters of the lidar and inputing the parameters that need to be searched, the corresponding parameter <br>
-values can be obtained.<br>
+　   Config_io provides configuration parameters, and the main program reads the parameter file by calling the<br>
+Config_io built-in function. The parameter file is placed in the Config folder and is the relevant data of the<br>
+lidar. By specifying the parameters of the lidar and inputing the parameters that need to be searched, the <br>
+corresponding parameter values can be obtained.<br>
 ## How does it work？You should really read it，it's important! 
 1. The configured files are placed in the Config folder. The contents of the files are mainly the type and number<br>
 of lidars and the parameters of different lidars.<br>
 2. Usage:<br>
-　#include "config_io.h" <br>
-　using hivelab_config_io::Config; <br>
-　//Read the Config_ini file： <br>
-　Config::SetConfigPath("mypath/config.ini"); <br>
+ #include "config_io.h" <br>
+ using hivelab_config_io::Config; <br>
+//Read the Config_ini file： <br>
+ Config::SetConfigPath("mypath/config.ini"); <br>
 　//Or : Config::UseDefaultPath("config.ini"); <br>
-　//Read the parameters you need： <br>
-　float var=Config::Get("FieldName","VarName"); <br>
+//Read the parameters you need： <br>
+ float var=Config::Get("FieldName","VarName"); <br>
 3. Else:<br>
 　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
 the symbol in the configuration file, you need to change the second parameter of SetConfig() to the corresponding<br>
