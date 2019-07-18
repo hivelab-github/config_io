@@ -22,10 +22,10 @@ of lidars and the parameters of different lidars.<br>
 2. Usage:<br>
 　#include "config_io.h" <br>
 　using hivelab_config_io::Config; <br>
-//Read the Config_ini file： <br>
+　//Read the Config_ini file： <br>
 　Config::SetConfigPath("mypath/config.ini"); <br>
-//Or : Config::UseDefaultPath("config.ini"); <br>
-//Read the parameters you need： <br>
+　//Or : Config::UseDefaultPath("config.ini"); <br>
+　//Read the parameters you need： <br>
 　float var=Config::Get("FieldName","VarName"); <br>
 3. Else:<br>
 　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
@@ -34,8 +34,7 @@ symbol;<br>
 　* When using the Get() function, incorrect input will cause the compiler to prompt "Field name or variable name<br>
 does not exist!"<br>
 　* When using the GetVector() and GetVector2() functions，incorrect parameter name input causes the compiler to<br>
-prompt<br>
-"Invalid data for vector type!"<br>
+prompt "Invalid data for vector type!"<br>
 　* When there is the same parameter name under the same segment value node, the compiler will prompt "Duplicated<br>
 names! The last one will be read!"<br>
 　* Allows you to add spaces to the configuration file and use the '#' comment.<br>
