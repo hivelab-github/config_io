@@ -13,10 +13,10 @@ values can be obtained.<br>
 ## How does it work？You should really read it，it's important! 
 Usage:<br>
 　 * #include "config_io.h" <br>
-　 using hivelab_config_io::Config; <br>
+　 * using hivelab_config_io::Config; <br>
 //Read the Config_ini file： <br>
 　 * Config::SetConfigPath("mypath/config.ini"); <br>
-　　//Or : Config::UseDefaultPath("config.ini"); <br>
+　　　//Or : Config::UseDefaultPath("config.ini"); <br>
 //Read the parameters you need： <br>
 　 * float var=Config::Get("FieldName","VarName"); <br>
 ## Additional information
