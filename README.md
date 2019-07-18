@@ -8,14 +8,14 @@ and the contents of the configuration file are read while the program is running
 needs to change the content of the configuration file, and the program itself does not modify it.<br>
 　　* Generally, large libraries such as opencv will have their own parameter configuration functions, but they are<br>
 quite inconvenient to use. On the one hand, the use of parameter commands requires systematic learning, and the<br>
-operation is cumbersome. On the other hand, using its parameters' commands simply causes a waste of function and disk<br>
-capacity. For this reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders,<br>
+operation is cumbersome. On the other hand, using its parameters' commands simply causes a waste of function and<br>
+disk capacity. For this reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders,<br>
 which can be used to read and store related project parameters.<br>
 ## What it does
 　   Config_io provides configuration parameters, and the main program reads the parameter file by calling the<br>
-Config_io built-in function. The parameter file is placed in the Config folder and is the relevant data of the<br>
-lidar. By specifying the parameters of the lidar and inputing the parameters that need to be searched, the <br>
-corresponding parameter values can be obtained.<br>
+Config_io built-in function. The parameter file is placed in the Config folder and is the relevant data of the lidar.<br>
+By specifying the parameters of the lidar and inputing the parameters that need to be searched, thecorresponding<br>
+parameter values can be obtained.<br>
 ## How does it work？You should really read it，it's important! 
 1. The configured files are placed in the Config folder. The contents of the files are mainly the type and number<br>
 of lidars and the parameters of different lidars.<br>
@@ -28,16 +28,16 @@ of lidars and the parameters of different lidars.<br>
 //Read the parameters you need： <br>
 　float var=Config::Get("FieldName","VarName"); <br>
 3. Else:<br>
-　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
-the symbol in the configuration file, you need to change the second parameter of SetConfig() to the corresponding<br>
-symbol;<br>
-　* When using the Get() function, incorrect input will cause the compiler to prompt "Field name or variable name<br>
-does not exist!"<br>
-　* When using the GetVector() and GetVector2() functions，incorrect parameter name input causes the compiler to<br>
-prompt "Invalid data for vector type!"<br>
-　* When there is the same parameter name under the same segment value node, the compiler will prompt "Duplicated<br>
-names! The last one will be read!"<br>
-　* Allows you to add spaces to the configuration file and use the '#' comment.<br>
+* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
+　the symbol in the configuration file, you need to change the second parameter of SetConfig() to the corresponding<br>
+　symbol;<br>
+* When using the Get() function, incorrect input will cause the compiler to prompt "Field name or variable name<br>
+　does not exist!"<br>
+* When using the GetVector() and GetVector2() functions，incorrect parameter name input causes the compiler to<br>
+　prompt "Invalid data for vector type!"<br>
+* When there is the same parameter name under the same segment value node, the compiler will prompt<br>
+　"Duplicated names! The last one will be read!"<br>
+* Allows you to add spaces to the configuration file and use the '#' comment.<br>
  
 ## Additional information
 A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The 
