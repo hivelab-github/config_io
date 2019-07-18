@@ -7,7 +7,7 @@ modification becomes difficult. Therefore, it is an excellent way to define a co
 and the contents of the configuration file are read while the program is running. In this way, each modification only <br>
 needs to change the content of the configuration file, and the program itself does not modify it.<br>
 　　* Generally, large libraries such as opencv will have their own parameter configuration functions, but they are<br>
-quite<br> inconvenient to use. On the one hand, the use of parameter commands requires systematic learning, and the<br>
+quite inconvenient to use. On the one hand, the use of parameter commands requires systematic learning, and the<br>
 operation is cumbersome. On the other hand, using its parameters' commands simply causes a waste of function and disk<br>
 capacity. For this reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders,<br>
 which can be used to read and store related project parameters.<br>
@@ -20,13 +20,13 @@ corresponding parameter values can be obtained.<br>
 1. The configured files are placed in the Config folder. The contents of the files are mainly the type and number<br>
 of lidars and the parameters of different lidars.<br>
 2. Usage:<br>
- #include "config_io.h" <br>
- using hivelab_config_io::Config; <br>
+　#include "config_io.h" <br>
+　using hivelab_config_io::Config; <br>
 //Read the Config_ini file： <br>
- Config::SetConfigPath("mypath/config.ini"); <br>
+　Config::SetConfigPath("mypath/config.ini"); <br>
 　//Or : Config::UseDefaultPath("config.ini"); <br>
 //Read the parameters you need： <br>
- float var=Config::Get("FieldName","VarName"); <br>
+　float var=Config::Get("FieldName","VarName"); <br>
 3. Else:<br>
 　* In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
 the symbol in the configuration file, you need to change the second parameter of SetConfig() to the corresponding<br>
