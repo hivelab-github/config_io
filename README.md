@@ -1,23 +1,24 @@
 
-## Why do it
-
 ## What it does
 Config_io is the program used to read the parameters of the configuration file.<br>
 * The first step is to correctly write the parameters you need in config_ini.<br>
-　*　Config_io will provide the corresponding parameter value based on the parameter name you entered.<br>
-　* When you need to modify the parameters, you only need to modify it in config_ini.<br>
+* Config_io will provide the corresponding parameter value based on the parameter name you entered.<br>
+* When you need to modify the parameters, you only need to modify it in config_ini.<br>
+## Why do it
+* Config is a separate program and it is easy to be used.<br>
+* Eliminates the hassle of calling large library parameter configuration methods such as opencv.<br>
 ## How does it work？You should really read it，it's important! 
-1. The configured files are placed in the Config folder. The contents of the files are mainly the type and number<br>
-of lidars and the parameters of different lidars.<br>
+1. config_ini is placed in the test folder. config_io is placed in the src folder, incluing config_io.cpp<br>
+and config_io.h.<br>
 2. Usage:<br>
 　#include "config_io.h" <br>
 　using hivelab_config_io::Config; <br>
-//Read the Config_ini file： <br>
+//Read the config_ini file： <br>
 　Config::SetConfigPath("mypath/config.ini"); <br>
-　//Or : Config::UseDefaultPath("config.ini"); <br>
 //Read the parameters you need： <br>
 　float var=Config::Get("FieldName","VarName"); <br>
 3. Else:<br>
+* You can also use "Config::UseDefaultPath("config.ini")" to read the config_ini file; <br>
 * In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
 　the symbol in the configuration file, you need to change the second parameter of SetConfig() to the<br>
 　corresponding symbol;<br>
@@ -28,7 +29,6 @@ of lidars and the parameters of different lidars.<br>
 * When there is the same parameter name under the same segment value node, the compiler will prompt<br>
 　"Duplicated names! The last one will be read!"<br>
 * Allows you to add spaces to the configuration file and use the '#' comment.<br>
- 
 ## Additional information
 A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The 
 results of testing in kdevelop are as follows.<br>
