@@ -20,14 +20,14 @@ and config_io.h.<br>
 3. Else:<br>
 * You can also use "Config::UseDefaultPath("config.ini")" to read the config_ini file; <br>
 * In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
-　the symbol in the configuration file, you need to change the second parameter of SetConfig() to the<br>
-　corresponding symbol;<br>
+the symbol in the configuration file, you need to change the second parameter of SetConfig() to the<br>
+corresponding symbol;<br>
 * When using the Get() function, incorrect input will cause the compiler to prompt "Field name or variable name<br>
-　does not exist!"<br>
+does not exist!"<br>
 * When using the GetVector() and GetVector2() functions，incorrect parameter name input causes the compiler to<br>
-　prompt "Invalid data for vector type!"<br>
+prompt "Invalid data for vector type!"<br>
 * When there is the same parameter name under the same segment value node, the compiler will prompt<br>
-　"Duplicated names! The last one will be read!"<br>
+"Duplicated names! The last one will be read!"<br>
 * Allows you to add spaces to the configuration file and use the '#' comment.<br>
 ## Additional information
 A small test program was placed under the test folder to  read some of the data, and the error was specifically shown.The 
