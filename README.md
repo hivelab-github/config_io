@@ -3,7 +3,7 @@
 
 ## What it does
 Config_io is the program used to read the parameters of the configuration file.<br>
-　*　The first step is to correctly write the parameters you need in config_ini.<br>
+* The first step is to correctly write the parameters you need in config_ini.<br>
 　*　Config_io will provide the corresponding parameter value based on the parameter name you entered.<br>
 　* When you need to modify the parameters, you only need to modify it in config_ini.<br>
 ## How does it work？You should really read it，it's important! 
