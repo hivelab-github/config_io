@@ -19,7 +19,6 @@
 */
 
 
-
 /* _<PACKAGE_NAME>_<FILE_NAME>_H_ */
 #ifndef _HIVELAB_CONFIG_IO_H_
 #define _HIVELAB_CONFIG_IO_H_ 
