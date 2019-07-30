@@ -52,6 +52,8 @@ public:
   operator double() const { return atof(data_.c_str()); }
   
   operator std::string() const { return data_; }
+  
+  operator bool() const { return bool(atoi(data_.c_str())); } 
 };
 
 }
@@ -100,7 +102,7 @@ public:
       if(ptr_->config_strs_[_field].find(_var) != ptr_->config_strs_[_field].end())
 	return T(ptr_->config_strs_[_field][_var]);
       
-    ptr_->PrintErrInfo("Field name or variable name does not exist!");
+    ptr_->PrintErrInfo("Field name " + _field + " or variable name " + _var + " does not exist!");
     return 0;
   }
   
@@ -146,7 +148,7 @@ public:
 	return tmp_vector;
       }
     
-    ptr_->PrintErrInfo("Field name or variable name does not exist!");
+    ptr_->PrintErrInfo("Field name " + _field + " or variable name " + _var + " does not exist!");
     return tmp_vector;
   }
   
@@ -198,7 +200,7 @@ public:
 	return tmp_vector2;
       }
       
-    ptr_->PrintErrInfo("Field name or variable name does not exist!");
+    ptr_->PrintErrInfo("Field name " + _field + " or variable name " + _var + " does not exist!");
     return tmp_vector2;
   }
   
