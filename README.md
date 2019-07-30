@@ -11,12 +11,10 @@ Config_io is the program used to read the parameters of the configuration file.<
 1. config_ini is placed in the test folder. config_io is placed in the src folder, incluing config_io.cpp<br>
 and config_io.h.<br>
 2. Usage:<br>
-　#include "config_io.h" <br>
-　using hivelab_config_io::Config; <br>
-//Read the config_ini file： <br>
-　Config::SetConfigPath("mypath/config.ini"); <br>
-//Read the parameters you need： <br>
-　float var=Config::Get("FieldName","VarName"); <br>
+* #include "config_io.h" <br>
+* using hivelab_config_io::Config; <br>
+* Config::SetConfigPath("mypath/config.ini"); //Read the config_ini file<br>
+* float var=Config::Get("FieldName","VarName"); //Read the parameters you need<br>
 3. Else:<br>
 * You can also use "Config::UseDefaultPath("config.ini")" to read the config_ini file; <br>
 * In SetConfigPath()，the symbol between the default parameter and the parameter value is “=”. When changing<br>
