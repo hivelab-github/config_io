@@ -1,21 +1,9 @@
-# lidar_parameters_config
-First entered the gate of github, I hope I will be better in the future.
+
 ## Why do it
-　* When writing a program, you often encounter a variety of parameters. If the parameters are written directly<br>
-in the program, the program needs to be recompiled each time it is modified. When the number is increasing, the<br>
-modification becomes difficult. Therefore, it is an excellent way to define a configuration file outside the program,<br>
-and the contents of the configuration file are read while the program is running. In this way, each modification only <br>
-needs to change the content of the configuration file, and the program itself does not modify it.<br>
-　* Generally, large libraries such as opencv will have their own parameter configuration functions, but they are<br>
-quite inconvenient to use. On the one hand, the use of parameter commands requires systematic learning, and the<br>
-operation is cumbersome. On the other hand, using its parameters' commands simply causes a waste of function and<br>
-disk capacity. For this reason, the Config_io.h and Config_io.cpp programs are provided in the include and src folders,<br>
-which can be used to read and store related project parameters.<br>
+*
+  *
 ## What it does
-　Config_io provides configuration parameters, and the main program reads the parameter file by calling the<br>
-Config_io built-in function. The parameter file is placed in the Config folder and is the relevant data of the lidar.<br>
-By specifying the parameters of the lidar and inputing the parameters that need to be searched, thecorresponding<br>
-parameter values can be obtained.<br>
+
 ## How does it work？You should really read it，it's important! 
 1. The configured files are placed in the Config folder. The contents of the files are mainly the type and number<br>
 of lidars and the parameters of different lidars.<br>
@@ -73,7 +61,7 @@ Vetor2 of LIDAR1's factor-----0.0187383<br>
 Vetor2 of LIDAR1's factor----0.804224<br>
 Vetor2 of LIDAR1's factor----1.51<br>
 lidar1 data wrong output:<br>
-[31mConfig Read ERROR: Field name or variable name does not exist![0m<br>
+Config Read ERROR: Field name or variable name does not exist!
 LIDAR1's port_lidar----0<br>
-[31mConfig Read ERROR: Invalid data for vector type![0m<br>
+Config Read ERROR: Invalid data for vector type!
 Vetor1 of LIDAR1's factor----0
